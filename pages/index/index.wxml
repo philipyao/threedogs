@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view>
+  <view class="header">
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="title">三只汪外卖</text>
+  </view>
+  <view class=label-box">
+    <text class="label">请选择要进入的分店： </text>
+  </view>  
+  <view class="shop-list-box">
+    <view class="shop-list-item" wx:for="{{shopList}}" wx:for-item="shop" wx:key="unique">
+      <view class="shop-list-item-main">
+        <text class="shop-list-item-name"> 三只汪外卖（{{shop.name}}） </text>
+        <text class="shop-list-item-addr"> {{shop.addr}} </text>
+      </view>
+      <view class="shop-list-item-icon">
+        <i class="iconfont icon-select" data-index="{{index}}" bindtap="selectShop"></i>
+      </view>
+    </view>
+  </view>
+  <view class="footer">
+    <text class="no-more">已经没有更多了</text>
+  </view>
+</view>

@@ -1,0 +1,74 @@
+/* pages/shop/shop.wxss */
+
+.shop-readme-box {
+  padding: 10px;
+}
+
+.shop-readme-title {
+  font-size: 12px;
+  font-weight: 600;
+}
+.shop-readme-text {
+  font-size: 12px;
+  color: gray;
+}
+
+/* 优惠券 */
+.bond {
+  height: 75px;
+  background-color:darkorange;
+}
+
+.list-left-menu{
+  width:160rpx;
+  font-size:28rpx;
+  position: absolute;
+  left:0px;
+  z-index: 10;
+}
+.list-left-menu-box-unselect{
+  padding:10rpx;
+  border-bottom:1px solid #E3E3E3;
+  height:72rpx;
+  color: #6C6C6C;
+  background:#F9F9F9;
+}
+.list-left-menu-box-selected{
+  padding:10rpx;
+  height:72rpx;
+  color: #FF9C35;
+  border-left:3px solid #FF9C35;
+  background:white;
+}
+
+.menu-name{
+  margin-left:170rpx;
+  font-size:25rpx;
+  background:#F3F4F6;
+  color:#CBCCCF;
+  padding:2px
+}
+.menu-content{
+  margin-left:160rpx;
+  display:flex;
+  border-bottom: 1px solid #E3E3E3;
+}
+
+.list-menu-name{
+  text-align: center;
+  margin-top:14rpx;
+}
+.goods-image-box{
+  width:160rpx;
+  height:72px;
+  text-align: center;
+}
+.goods-image{
+  width:108rpx;
+  margin-top:16rpx;
+}
+.goods-main{
+  width:200px;
+  font-size:30rpx;
+  margin-top:20rpx;
+}
