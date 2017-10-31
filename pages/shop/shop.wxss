@@ -72,3 +72,56 @@
   font-size:30rpx;
   margin-top:20rpx;
 }
+
+/* 购物车 */
+.cart-bar{
+  z-index: 1001;
+  position: fixed;
+  bottom: 0px;
+  height:55px;
+  width:100%;
+  display: flex;
+  flex-flow: row;
+}
+.cart{
+  width:75%;
+  background:#353535;
+  height: 100%; 
+}
+.cart-icon{
+  font-size:40px;
+  color:#87888E;
+  margin-left:10px;
+  position: relative;
+}
+.count-msg{
+  padding: 1px 7px;
+  border-radius:50%;
+  background:red;
+  color:white;
+  font-size:14px;
+  position: absolute;
+  text-align: center;
+  top:0px;
+  right:-5px;
+}
+
+.cart-price{
+  color:#A9A9A9;
+  display:flex;
+  align-items: center;
+  margin-left:10px;
+  font-size:15px
+}
+
+.submit-btn{
+  height:100%;
+  background:#F7F7F7;
+  width:25%;
+  display:flex;
+}
+.submit-btn-label{
+  color:#A9A9A9;
+  font-size:15px;
+  margin:auto;
+}

@@ -33,3 +33,4 @@
 }
 
 .icon-select:before { content: "\e61e"; }
+.icon-cart:before { content: "\e73c"; }

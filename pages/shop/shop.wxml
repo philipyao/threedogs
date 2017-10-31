@@ -33,12 +33,12 @@
     </view>
   </view>
   <!-- 右侧菜单 -->
-  <scroll-view scroll-y="true" style='height:1200rpx;' bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <scroll-view style='height:1200rpx;' bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
     <view class="content" id="a{{index}}" wx:for="{{shopData.menu}}" wx:key="unique">
       <view class='menu-name'>{{item.name}}</view>
       <view class='menu-content' wx:for="{{item.goodsList}}" wx:key="unique" wx:for-item="goods" wx:for-index="goodsIndex">
         <view class='goods-image-box'>
-          <image class="goods-image" mode="widthFix" src='{{goods.imageURL}}'></image>
+          <image class="goods-image" mode="widthFix" src='{{goods.imgURL}}'></image>
         </view>
         <view class='goods-main'>
           <view>{{goods.name}}</view>
@@ -51,5 +51,20 @@
       </view>
     </view>
   </scroll-view>  
+  <!-- 底部操作菜单 -->
+  <view class="cart-bar" wx:if="{{loading}}">
+    <view class='cart'>
+      <view style='padding:5px;display:flex'>
+        <i class="iconfont icon-cart cart-icon {{sumMonney!=0?'activity-color':'' }}" bindtap="showCartList">
+          <span class="count-msg" wx:if="{{count==0}}">{{count}}</span>
+        </i>
 
+        <view class='cart-price' wx:if="{{cartList.length==0}}">购物车是空的</view>
+        <view class='cart-price' wx:else style='color:white;font-size:18px'>¥ {{sumMonney}}.00</view>
+      </view>
+    </view>
+    <view class="submit-btn {{sumMonney!=0?'activity-color-bg':'' }}" bindtap='goBalance'>
+      <view class="submit-btn-label {{sumMonney!=0?'color-white':'' }}">选好了</view>
+    </view>
+  </view>
 </view>
