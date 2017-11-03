@@ -78,6 +78,23 @@ Page({
         }
       })
     }
+
+    wx.request({
+      url: 'https://easy-mock.com/mock/59abab95e0dc66334199cc5f/coco/aa',
+      method: 'GET',
+      data: {},
+      header: {
+        'Accept': 'application/json'
+      },
+      success: function (res) {
+        wx.hideLoading();
+        console.log(res)
+        that.setData({
+          listData: res.data,
+          loading: true
+        })
+      }
+    })    
   },
   getUserInfo: function(e) {
     console.log(e)
